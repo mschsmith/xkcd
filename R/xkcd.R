@@ -49,7 +49,7 @@ plot.xkcd <- function(x){
   tmp <- tempfile(pattern = "file",
                   tmpdir = tempdir())
 
-  utils::download.file(x$img, destfile = tmp)
+  utils::download.file(x$img, destfile = tmp, mode = "wb")
 
   if(img_type == "png"){
     p <- png::readPNG(tmp)
