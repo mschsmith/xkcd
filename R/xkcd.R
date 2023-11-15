@@ -69,7 +69,8 @@ validate_xkcd <- function(x){
 #'
 #' Given an [`xkcd`] object, this [`base::plot`] method retrieves the image file associated with
 #' this comic from the xkcd website and displays it in the currently active graphics device.
-#' @param x An xkcd object
+#' @param x An [`xkcd`] object
+#' @param ... Currently ignored
 #'
 #' @importFrom tools file_ext
 #' @importFrom utils download.file
@@ -77,7 +78,7 @@ validate_xkcd <- function(x){
 #' @importFrom jpeg readJPEG
 #' @importFrom grid grid.raster
 #' @exportS3Method
-plot.xkcd <- function(x){
+plot.xkcd <- function(x, ...){
 
   img_type <- tools::file_ext(x$img)
 
